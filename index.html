@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 추천기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="header">
+      <h1>로또 번호 추천기</h1>
+      <p>버튼을 누르면 중복 없는 로또 번호 5세트를 한 번에 추천합니다.</p>
+    </div>
+
+    <section id="lottoNumbers" class="lotto-list" aria-live="polite"></section>
+
+    <button type="button" id="generateButton">번호 5세트 추천받기</button>
+
+    <div class="note">
+      ※ 이 번호는 무작위 추천이며 당첨을 보장하지 않습니다.
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
