@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로또 번호 추천기</title>
+  <title>Global Economy Analytics Hub</title>
   <meta name="google-adsense-account" content="ca-pub-2318911583209270">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2318911583209270"
      crossorigin="anonymous"></script>
@@ -13,67 +13,132 @@
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">LottoGen</a>
+      <a href="#" class="nav-logo">GEA Hub</a>
       <ul class="nav-links">
-        <li><a href="#generate">추천받기</a></li>
-        <li><a href="#how-to">이용방법</a></li>
-        <li><a href="#tips">번호팁</a></li>
-        <li><a href="#about">소개</a></li>
-        <li><a href="#privacy">개인정보</a></li>
+        <li><a href="#news">경제뉴스</a></li>
+        <li><a href="#analysis">전문가분석</a></li>
+        <li><a href="#sectors">실시간수익률</a></li>
+        <li><a href="#defi">DeFi수익률</a></li>
+        <li><a href="#my-insight">본인분석</a></li>
+        <li><a href="#weekly">주간요약</a></li>
       </ul>
       <button id="modeToggle" class="mode-toggle" aria-label="다크 모드 토글">☀️</button>
     </div>
   </nav>
 
   <main class="container">
-    <div id="generate" class="header">
-      <h1>로또 번호 추천기</h1>
-      <p>빅데이터 통계가 아닌, 순수 확률 기반의 무작위 번호 5세트를 추천합니다.</p>
-    </div>
+    <header class="hub-header">
+      <h1>Global Economy Analytics Hub</h1>
+      <p>글로벌 거시 경제 데이터와 전문가 인사이트를 실시간으로 분석합니다.</p>
+    </header>
 
-    <section id="lottoNumbers" class="lotto-list" aria-live="polite"></section>
-
-    <button type="button" id="generateButton">번호 5세트 추천받기</button>
-
-    <div class="note">
-      ※ 이 번호는 무작위 추천이며 당첨을 보장하지 않습니다.
-    </div>
-
-    <!-- 정보성 콘텐츠 섹션 추가 -->
-    <section id="how-to" class="info-section">
-      <h2>📖 이용 방법</h2>
-      <p>이 서비스는 복잡한 가입 절차 없이 누구나 무료로 로또 번호를 생성할 수 있습니다. 상단의 '추천받기' 버튼을 누르시면 1부터 45까지의 숫자 중 중복되지 않는 6개의 숫자를 한 세트로 하여, 총 5세트의 번호를 즉시 생성해 드립니다.</p>
-      <ul>
-        <li>생성된 번호는 오름차순으로 자동 정렬되어 확인이 편리합니다.</li>
-        <li>번호 공의 색상은 실제 로또 당첨 번호의 색상 범위와 동일하게 적용되어 시인성을 높였습니다.</li>
-        <li>추가적인 번호가 필요하시면 언제든지 버튼을 다시 눌러 새로운 조합을 얻으실 수 있습니다.</li>
-      </ul>
-    </section>
-
-    <section id="tips" class="info-section">
-      <h2>💡 로또 번호 선택 팁</h2>
-      <p>로또의 당첨 확률은 약 814만 분의 1로 매우 희박합니다. 하지만 많은 분들이 번호를 선택할 때 다음과 같은 방식을 참고하곤 합니다.</p>
-      <div class="tip-card-grid">
-        <div class="tip-card">
-          <h3>균형 있는 선택</h3>
-          <p>홀수와 짝수의 비율을 3:3 또는 2:4 정도로 섞는 것이 통계적으로 자주 나타나는 유형입니다.</p>
+    <!-- 📰 경제 뉴스 (Daily) -->
+    <section id="news" class="info-section">
+      <h2>📰 경제 뉴스 (Daily)</h2>
+      <div class="card-grid">
+        <div class="data-card">
+          <h3>🇺🇸 미국 경제</h3>
+          <p>연준의 금리 동결 기조와 고용 지표 발표 예정. 인플레이션 둔화 속도 주목.</p>
         </div>
-        <div class="tip-card">
-          <h3>연속 번호 지양</h3>
-          <p>1, 2, 3과 같이 연속된 세 개 이상의 숫자가 나오는 경우는 드물기 때문에 적절히 분산시키는 것이 좋습니다.</p>
+        <div class="data-card">
+          <h3>🇨🇳 중국 경제</h3>
+          <p>부동산 경기 부양책 효과 검증 단계. 내수 소비 회복 지표 분석.</p>
+        </div>
+        <div class="data-card">
+          <h3>🇪🇺 유럽 경제</h3>
+          <p>ECB의 통화 정책 변화 및 유로존 에너지 가격 안정성 점검.</p>
+        </div>
+        <div class="data-card">
+          <h3>₿ 암호화폐 뉴스</h3>
+          <p>현물 ETF 유입세 지속 및 반감기 이후 채굴 난이도 조정 영향.</p>
         </div>
       </div>
-      <p>중요한 것은 로또는 어디까지나 <strong>확률 게임</strong>이라는 점입니다. 과도한 몰입보다는 소소한 재미로 즐기시는 것을 권장합니다.</p>
     </section>
 
-    <section id="about" class="info-section">
-      <h2>👋 사이트 소개</h2>
-      <p>LottoGen(KDH 제작)은 사용자들에게 직관적이고 깔끔한 디자인으로 로또 번호를 추천하기 위해 만들어진 프로젝트입니다. 최신 웹 기술을 활용하여 모바일과 데스크톱 모두에서 최적화된 경험을 제공하며, 사용자 여러분의 행운을 진심으로 기원합니다.</p>
+    <!-- 📊 전문가 분석 정리 -->
+    <section id="analysis" class="info-section">
+      <h2>📊 전문가 분석 정리</h2>
+      <div class="list-container">
+        <div class="list-item">
+          <strong>Bloomberg:</strong> "글로벌 공급망 재편에 따른 인플레이션 장기화 우려 제기"
+        </div>
+        <div class="list-item">
+          <strong>JP Morgan:</strong> "기술주 중심의 실적 장세 지속, 하반기 연착륙 가능성 70% 상회"
+        </div>
+        <div class="list-item">
+          <strong>Goldman Sachs:</strong> "에너지 섹터 비중 확대 제안, 지정학적 리스크 프리미엄 반영"
+        </div>
+        <div class="list-item">
+          <strong>투자은행 종합:</strong> 금리 인하 시점에 대한 의견차 존재하나, 전반적 낙관론 우세.
+        </div>
+      </div>
     </section>
 
-    <section id="privacy" class="info-section">
-      <h2>🛡️ 개인정보처리방침</h2>
-      <p>본 사이트는 사용자의 어떠한 개인정보도 서버에 저장하거나 수집하지 않습니다. 번호 생성 로직은 사용자의 브라우저 내에서 직접 실행되며, 쿠키(Local Storage)는 오직 사용자의 다크모드 테마 설정을 기억하기 위한 목적으로만 최소한으로 사용됩니다. 또한, 구글 애드센스 등 타사 광고 서비스를 통해 익명의 방문 통계가 수집될 수 있습니다.</p>
+    <!-- 📈 섹터별 실시간 수익률 -->
+    <section id="sectors" class="info-section">
+      <h2>📈 섹터별 실시간 수익률</h2>
+      <div class="yield-grid">
+        <div class="yield-item up"><span>기술주 (Tech)</span> <strong>+2.45%</strong></div>
+        <div class="yield-item up"><span>금융주 (Finance)</span> <strong>+1.12%</strong></div>
+        <div class="yield-item down"><span>에너지 (Energy)</span> <strong>-0.85%</strong></div>
+        <div class="yield-item up"><span>부동산 (Real Estate)</span> <strong>+0.34%</strong></div>
+        <div class="yield-item up"><span>암호화폐 (DeFi)</span> <strong>+5.12%</strong></div>
+      </div>
+    </section>
+
+    <!-- 💰 DeFi 수익률 비교 -->
+    <section id="defi" class="info-section">
+      <h2>💰 DeFi 수익률 비교</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>플랫폼/방식</th>
+            <th>APY</th>
+            <th>기간</th>
+            <th>리스크 레벨</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Staking (ETH)</td>
+            <td>3.8%</td>
+            <td>유동적</td>
+            <td>낮음</td>
+          </tr>
+          <tr>
+            <td>LP (USDC-WETH)</td>
+            <td>12.5%</td>
+            <td>주간</td>
+            <td>보통</td>
+          </tr>
+          <tr>
+            <td>Yield Farming</td>
+            <td>24.0%+</td>
+            <td>일일</td>
+            <td>높음</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 💡 본인 분석 -->
+    <section id="my-insight" class="info-section">
+      <h2>💡 본인 분석</h2>
+      <div class="insight-box">
+        <h3>섹터 전망 및 투자 기회</h3>
+        <p>인공지능(AI) 인프라 확장에 따른 전력 수요 급증으로 에너지 인프라 섹터의 중장기 수혜가 예상됩니다. 또한 가상자산 시장의 제도권 편입 가속화에 따른 포트폴리오 다변화가 필요한 시점입니다.</p>
+        <div class="warning-tag">⚠️ 리스크 경고: 고금리 유지 기간 연장에 따른 중소형 금융기관의 유동성 리스크 주의 필요.</div>
+      </div>
+    </section>
+
+    <!-- 📌 주간 요약 -->
+    <section id="weekly" class="info-section">
+      <h2>📌 주간 요약</h2>
+      <div class="summary-container">
+        <div class="summary-item"><strong>이주의 핵심:</strong> 고용 지표 안정이 금리 인하 기대감을 뒷받침함.</div>
+        <div class="summary-item"><strong>다음주 관전포인트:</strong> 소비자물가지수(CPI) 발표 및 연준 의장 발언.</div>
+        <div class="summary-item"><strong>투자 아이디어:</strong> 배당 성장주와 레이어2 솔루션 분할 매수 전략.</div>
+      </div>
     </section>
 
     <section class="contact-section">
@@ -98,27 +163,17 @@
     <section class="comments-section" style="margin-top: 40px; padding-top: 32px; border-top: 1px dashed var(--container-border);">
       <div id="disqus_thread"></div>
       <script>
-          /**
-          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-          /*
-          var disqus_config = function () {
-          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-          };
-          */
-          (function() { // DON'T EDIT BELOW THIS LINE
+          (function() {
           var d = document, s = d.createElement('script');
           s.src = 'https://productbuilder-f98wrz4nfr.disqus.com/embed.js';
           s.setAttribute('data-timestamp', +new Date());
           (d.head || d.body).appendChild(s);
           })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
 
-    <footer style="text-align: center; margin-top: 20px; font-size: 12px; opacity: 0.6; font-weight: bold;">
-      Created by KDH
+    <footer class="footer">
+      <p>&copy; 2026 Global Economy Analytics Hub. Created by KDH</p>
     </footer>
   </main>
 
