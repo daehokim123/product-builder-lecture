@@ -1,5 +1,23 @@
 const lottoArea = document.getElementById("lottoNumbers");
 const generateButton = document.getElementById("generateButton");
+const modeToggle = document.getElementById("modeToggle");
+
+// 다크 모드 초기화 및 토글 로직
+function initDarkMode() {
+  const isDark = localStorage.getItem("darkMode") === "true" || 
+                 (!localStorage.getItem("darkMode") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  
+  if (isDark) {
+    document.body.classList.add("dark-mode");
+    modeToggle.textContent = "🌙";
+  }
+}
+
+modeToggle.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", isDark);
+  modeToggle.textContent = isDark ? "🌙" : "☀️";
+});
 
 function createInitialSets() {
   const sets = Array.from({ length: 5 }, () => Array(6).fill("?"));
@@ -61,4 +79,5 @@ function getBallColor(number) {
 }
 
 generateButton.addEventListener("click", generateFiveLotto);
+initDarkMode();
 createInitialSets();
