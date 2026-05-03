@@ -4,6 +4,29 @@ const dailyDateSelector = document.getElementById("dailyDateSelector");
 const weeklyDateSelector = document.getElementById("weeklyDateSelector");
 const dailyContent = document.getElementById("dailyContent");
 const weeklyContent = document.getElementById("weeklyContent");
+const btcPriceDisplay = document.getElementById("btcPriceDisplay");
+
+// --- 업비트 실시간 시세 가져오기 ---
+async function fetchUpbitPrice() {
+  try {
+    const response = await fetch("https://api.upbit.com/v1/ticker?markets=KRW-BTC");
+    const data = await response.json();
+    const btc = data[0];
+
+    const price = btc.trade_price.toLocaleString();
+    const changeRate = (btc.signed_change_rate * 100).toFixed(2);
+    const isRise = btc.change === "RISE";
+
+    btcPriceDisplay.textContent = `₩${price} (${isRise ? '+' : ''}${changeRate}%)`;
+    btcPriceDisplay.className = isRise ? "up" : "down";
+  } catch (error) {
+    console.error("Upbit API 호출 에러:", error);
+    btcPriceDisplay.textContent = "데이터 오류";
+  }
+}
+
+// 10초마다 시세 업데이트
+setInterval(fetchUpbitPrice, 10000);
 
 // --- 데이터 저장소 (예시 데이터 포함) ---
 const archives = {
@@ -182,3 +205,4 @@ initDarkMode();
 populateSelectors();
 renderDaily(0); // 최신 데일리 렌더링
 renderWeekly(0); // 최신 위클리 렌더링
+fetchUpbitPrice(); // 비트코인 시세 즉시 실행
