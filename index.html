@@ -27,7 +27,12 @@
       <div id="google_translate_element" style="margin-left: 15px;"></div>
       <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          new google.translate.TranslateElement({
+            pageLanguage: 'ko', 
+            includedLanguages: 'ko,en,zh-CN,ja',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          }, 'google_translate_element');
         }
       </script>
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -40,25 +45,134 @@
       <h1>복잡한 글로벌 경제 흐름을 한눈에 정리합니다</h1>
       <p>오늘의 핵심 이슈, 시장 지표, 학습 자료를 연결해 투자와 비즈니스 판단에 필요한 맥락을 제공합니다.</p>
       <div class="hero-actions">
-        <a href="daily.html" class="primary-link">오늘 브리핑 보기</a>
+        <a href="#data" class="primary-link">시장 데이터 보기</a>
         <a href="articles.html" class="secondary-link">경제 리포트 보기</a>
-      </div>
-      <div class="hero-stats" aria-label="사이트 주요 콘텐츠">
-        <div>
-          <strong>Daily</strong>
-          <span>핵심 이슈</span>
-        </div>
-        <div>
-          <strong>Market</strong>
-          <span>주요 지표</span>
-        </div>
-        <div>
-          <strong>Weekly</strong>
-          <span>흐름 요약</span>
-        </div>
       </div>
     </header>
 
+    <!-- 1️⃣ 실시간 데이터 (최상단 배치) -->
+    <section id="data" class="info-section">
+      <div class="section-header compact">
+        <div>
+          <p class="section-kicker">Market Dashboard</p>
+          <h2>실시간 시장 데이터</h2>
+        </div>
+      </div>
+      
+      <div class="data-group">
+        <h3>🌍 국가별 주요 지수</h3>
+        <div class="market-grid">
+          <div class="market-box">
+            <h4>🇺🇸 미국</h4>
+            <div class="market-data">
+              <div class="data-row up"><span>S&P 500</span> <strong>5,420.15 (+0.8%)</strong></div>
+              <div class="data-row down"><span>NASDAQ</span> <strong>17,850.44 (-0.3%)</strong></div>
+              <div class="data-row up"><span>DOW</span> <strong>39,120.50 (+0.5%)</strong></div>
+            </div>
+          </div>
+          <div class="market-box">
+            <h4>🇨🇳 중국</h4>
+            <div class="market-data">
+              <div class="data-row up"><span>상해종합</span> <strong>3,050.22 (+1.1%)</strong></div>
+              <div class="data-row up"><span>항셍</span> <strong>18,200.45 (+1.5%)</strong></div>
+            </div>
+          </div>
+          <div class="market-box">
+            <h4>🇯🇵 일본</h4>
+            <div class="market-data">
+              <div class="data-row down"><span>Nikkei 225</span> <strong>38,700.12 (-0.4%)</strong></div>
+            </div>
+          </div>
+          <div class="market-box">
+            <h4>🇪🇺 유럽</h4>
+            <div class="market-data">
+              <div class="data-row up"><span>Euro Stoxx 50</span> <strong>4,980.50 (+0.6%)</strong></div>
+              <div class="data-row down"><span>DAX (독일)</span> <strong>18,100.20 (-0.2%)</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-group" style="margin-top: 32px;">
+        <h3>📊 주요 시장 지표</h3>
+        <div class="market-grid">
+          <div class="indicator-item">
+            <span>🥇 금 (Gold)</span>
+            <strong class="up">$2,350.40 (+0.4%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>🛢️ 유가 (WTI)</span>
+            <strong class="down">$78.20 (-1.2%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>💵 환율 (USD/KRW)</span>
+            <strong class="up">1,375.50 (+0.2%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>💧 리플 (XRP/Upbit)</span>
+            <strong id="xrpPriceDisplay" class="up">로딩 중...</strong>
+          </div>
+          <div class="indicator-item">
+            <span>📉 달러 인덱스</span>
+            <strong class="down">104.50 (-0.1%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>🪙 비트코인 (Upbit)</span>
+            <strong id="btcPriceDisplay" class="up">로딩 중...</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-group" style="margin-top: 32px;">
+        <h3>💰 Flare Network 기반 XRPFi 수익률</h3>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>플랫폼 / 방식</th>
+                <th>대상 자산</th>
+                <th>예상 APY</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="asset-name"><strong>Firelight (Liquid Staking)</strong></td>
+                <td>fXRP (stXRP)</td>
+                <td><span class="apy-badge">7.0% ~ 12.0%</span></td>
+                <td>XRP를 fXRP로 변환 후 스테이킹하여 보상 획득</td>
+              </tr>
+              <tr>
+                <td class="asset-name"><strong>Kinetic (Lending)</strong></td>
+                <td>fXRP / FLR</td>
+                <td><span class="apy-badge">3.0% ~ 8.0%</span></td>
+                <td>자산 대출을 통한 이자 수익 및 인센티브 보상</td>
+              </tr>
+              <tr>
+                <td class="asset-name"><strong>Sparkdex (LP)</strong></td>
+                <td>fXRP / stXRP</td>
+                <td><span class="apy-badge">12.0% ~ 25.0%+</span></td>
+                <td>fXRP와 stXRP 유동성 공급을 통한 거래 수수료 및 보상</td>
+              </tr>
+              <tr>
+                <td class="asset-name"><strong>Enosys (LP)</strong></td>
+                <td>fXRP / USDT0</td>
+                <td><span class="apy-badge">15.0% ~ 30.0%+</span></td>
+                <td>유동성 공급을 통한 거래 수수료 및 보상 획득</td>
+              </tr>
+              <tr>
+                <td class="asset-name"><strong>FTSO Delegation</strong></td>
+                <td>WFLR</td>
+                <td><span class="apy-badge">약 7.0% ~ 10.0%</span></td>
+                <td>Flare 네트워크 데이터 제공 위임 보상 (안전 자산)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2️⃣ 오늘의 이슈 (Daily) -->
     <section id="daily-issue" class="info-section">
       <div class="section-header">
         <div>
@@ -72,6 +186,7 @@
         </div>
       </div>
       <div id="dailyContent">
+        <!-- Dynamic Content from script.js -->
       </div>
     </section>
 
@@ -128,141 +243,12 @@
       </div>
     </section>
 
-    <section id="data" class="info-section">
-      <div class="section-header compact">
-        <div>
-          <p class="section-kicker">Market Dashboard</p>
-          <h2>시장 데이터</h2>
-        </div>
-      </div>
-      
-      <div class="data-group">
-        <h3>국가별 주요 지수</h3>
-        <div class="source-box">
-          <strong>데이터 기준:</strong> 아래 지수 일부는 화면 구성과 지표 해설을 위한 참고 값입니다. 실제 투자 판단 전에는 거래소, 지수 제공사, 한국은행 등 공식 출처를 확인해야 합니다.
-        </div>
-        <div class="market-grid">
-          <div class="market-box">
-            <h4>🇺🇸 미국</h4>
-            <div class="market-data">
-              <div class="data-row up"><span>S&P 500</span> <strong>5,420.15 (+0.8%)</strong></div>
-              <div class="data-row down"><span>NASDAQ</span> <strong>17,850.44 (-0.3%)</strong></div>
-              <div class="data-row up"><span>DOW</span> <strong>39,120.50 (+0.5%)</strong></div>
-            </div>
-          </div>
-          <div class="market-box">
-            <h4>🇨🇳 중국</h4>
-            <div class="market-data">
-              <div class="data-row up"><span>상해종합</span> <strong>3,050.22 (+1.1%)</strong></div>
-              <div class="data-row up"><span>항셍</span> <strong>18,200.45 (+1.5%)</strong></div>
-            </div>
-          </div>
-          <div class="market-box">
-            <h4>🇯🇵 일본</h4>
-            <div class="market-data">
-              <div class="data-row down"><span>Nikkei 225</span> <strong>38,700.12 (-0.4%)</strong></div>
-            </div>
-          </div>
-          <div class="market-box">
-            <h4>🇪🇺 유럽</h4>
-            <div class="market-data">
-              <div class="data-row up"><span>Euro Stoxx 50</span> <strong>4,980.50 (+0.6%)</strong></div>
-              <div class="data-row down"><span>DAX (독일)</span> <strong>18,100.20 (-0.2%)</strong></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="data-group">
-        <h3>주요 시장 지표</h3>
-        <div class="market-grid">
-          <div class="indicator-item">
-            <span>🥇 금 (Gold)</span>
-            <strong class="up">$2,350.40 (+0.4%)</strong>
-          </div>
-          <div class="indicator-item">
-            <span>🛢️ 유가 (WTI)</span>
-            <strong class="down">$78.20 (-1.2%)</strong>
-          </div>
-          <div class="indicator-item">
-            <span>💵 환율 (USD/KRW)</span>
-            <strong class="up">1,375.50 (+0.2%)</strong>
-          </div>
-          <div class="indicator-item">
-            <span>💧 리플 (XRP/Upbit)</span>
-            <strong id="xrpPriceDisplay" class="up">로딩 중...</strong>
-          </div>
-          <div class="indicator-item">
-            <span>📉 달러 인덱스</span>
-            <strong class="down">104.50 (-0.1%)</strong>
-          </div>
-          <div class="indicator-item">
-            <span>🪙 비트코인 (Upbit)</span>
-            <strong id="btcPriceDisplay" class="up">로딩 중...</strong>
-          </div>
-        </div>
-      </div>
-
-      <div class="data-group">
-        <h3>Flare Network 기반 XRPFi 수익률</h3>
-        <div class="table-wrapper">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>플랫폼 / 방식</th>
-                <th>대상 자산</th>
-                <th>예상 APY</th>
-                <th>설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="asset-name"><strong>Firelight (Liquid Staking)</strong></td>
-                <td>fXRP (stXRP)</td>
-                <td><span class="apy-badge">7.0% ~ 12.0%</span></td>
-                <td>XRP를 fXRP로 변환 후 스테이킹하여 보상 획득</td>
-              </tr>
-              <tr>
-                <td class="asset-name"><strong>Kinetic (Lending)</strong></td>
-                <td>fXRP / FLR</td>
-                <td><span class="apy-badge">3.0% ~ 8.0%</span></td>
-                <td>자산 대출을 통한 이자 수익 및 인센티브 보상</td>
-              </tr>
-              <tr>
-                <td class="asset-name"><strong>Sparkdex (LP)</strong></td>
-                <td>fXRP / stXRP</td>
-                <td><span class="apy-badge">12.0% ~ 25.0%+</span></td>
-                <td>fXRP와 stXRP 유동성 공급을 통한 거래 수수료 및 보상</td>
-              </tr>
-              <tr>
-                <td class="asset-name"><strong>Enosys (LP)</strong></td>
-                <td>fXRP / USDT0</td>
-                <td><span class="apy-badge">15.0% ~ 30.0%+</span></td>
-                <td>유동성 공급을 통한 거래 수수료 및 보상 획득</td>
-              </tr>
-              <tr>
-                <td class="asset-name"><strong>FTSO Delegation</strong></td>
-                <td>WFLR</td>
-                <td><span class="apy-badge">약 7.0% ~ 10.0%</span></td>
-                <td>Flare 네트워크 데이터 제공 위임 보상 (안전 자산)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="ai-analysis note-block">
-          <strong>XRPFi 핵심 전략:</strong> XRP 홀더는 Flare 네트워크에서 <b>fXRP</b>를 활용해 단순 보유 이상의 수익을 추구할 수 있습니다. 특히 <b>Firelight</b>를 통한 리퀴드 스테이킹(stXRP)은 자산의 유동성을 유지하면서 수익 기회를 넓히는 전략입니다.
-        </div>
-      </div>
-      <div class="disclosure-box">
-        본 사이트의 시장 데이터와 수익률 정보는 학습 및 일반 정보 제공 목적입니다. 데이터 지연, API 오류, 시장 변동에 따라 실제 값과 다를 수 있으며, 특정 금융상품에 대한 투자 권유가 아닙니다.
-      </div>
-    </section>
-
+    <!-- 4️⃣ 주간 요약 (1x/주) -->
     <section id="weekly" class="info-section">
       <div class="section-header">
         <div>
           <p class="section-kicker">Weekly Review</p>
-          <h2>주간 요약</h2>
+          <h2>주간 흐름 요약</h2>
         </div>
         <div class="archive-selector">
           <select id="weeklyDateSelector" aria-label="이전 요약 선택">
@@ -271,16 +257,12 @@
         </div>
       </div>
       <div id="weeklyContent">
+        <!-- Dynamic Content from script.js -->
       </div>
     </section>
 
     <section class="contact-section">
-      <div class="section-header compact">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>제휴 및 비즈니스 문의</h2>
-        </div>
-      </div>
+      <h2>🤝 제휴 및 비즈니스 문의</h2>
       <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnjwjlny" method="POST">
         <div class="form-group">
           <label for="name">성함/업체명</label>
@@ -298,7 +280,7 @@
       </form>
     </section>
 
-    <section class="comments-section">
+    <section class="comments-section" style="margin-top: 40px; padding-top: 32px; border-top: 1px dashed var(--container-border);">
       <div id="disqus_thread"></div>
       <script>
           (function() {
