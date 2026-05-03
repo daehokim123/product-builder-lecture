@@ -287,6 +287,13 @@ body {
   background: var(--set-bg);
   border-radius: 20px;
   border: 1px solid var(--set-border);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
 }
 
 .expert-header {
