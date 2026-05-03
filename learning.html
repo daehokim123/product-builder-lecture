@@ -237,8 +237,6 @@
       articleBody.innerHTML = `
         <h3>학습 내용 요약</h3>
         <p>본 자료는 '${item.title}'에 대한 핵심 내용을 정리한 자료입니다.</p>
-        <p>경제의 흐름을 파악하기 위해 핵심 키워드와 맥락을 중심으로 학습하시기 바랍니다.</p>
-        <p>(실제 상세 내용은 워드 파일의 텍스트를 이곳에 업데이트하여 관리하세요.)</p>
       `;
       listView.style.display = "none";
       contentViewer.style.display = "block";
@@ -265,6 +263,12 @@
       const isDark = document.body.classList.toggle("dark-mode");
       localStorage.setItem("darkMode", isDark);
       modeToggle.textContent = isDark ? "🌙" : "☀️";
+    });
+    initDarkMode();
+  </script>
+</body>
+</html>
+ isDark ? "🌙" : "☀️";
     });
     initDarkMode();
   </script>
