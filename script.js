@@ -5,23 +5,35 @@ const weeklyDateSelector = document.getElementById("weeklyDateSelector");
 const dailyContent = document.getElementById("dailyContent");
 const weeklyContent = document.getElementById("weeklyContent");
 const btcPriceDisplay = document.getElementById("btcPriceDisplay");
+const xrpPriceDisplay = document.getElementById("xrpPriceDisplay");
 
-// --- 업비트 실시간 시세 가져오기 ---
+// --- 업비트 실시간 시세 가져오기 (BTC & XRP) ---
 async function fetchUpbitPrice() {
   try {
-    const response = await fetch("https://api.upbit.com/v1/ticker?markets=KRW-BTC");
+    const response = await fetch("https://api.upbit.com/v1/ticker?markets=KRW-BTC,KRW-XRP");
     const data = await response.json();
-    const btc = data[0];
+    
+    // 비트코인 처리
+    const btc = data.find(item => item.market === "KRW-BTC");
+    if (btc) {
+      const btcPrice = btc.trade_price.toLocaleString();
+      const btcChange = (btc.signed_change_rate * 100).toFixed(2);
+      const btcRise = btc.change === "RISE";
+      btcPriceDisplay.textContent = `₩${btcPrice} (${btcRise ? '+' : ''}${btcChange}%)`;
+      btcPriceDisplay.className = btcRise ? "up" : "down";
+    }
 
-    const price = btc.trade_price.toLocaleString();
-    const changeRate = (btc.signed_change_rate * 100).toFixed(2);
-    const isRise = btc.change === "RISE";
-
-    btcPriceDisplay.textContent = `₩${price} (${isRise ? '+' : ''}${changeRate}%)`;
-    btcPriceDisplay.className = isRise ? "up" : "down";
+    // 리플 처리
+    const xrp = data.find(item => item.market === "KRW-XRP");
+    if (xrp) {
+      const xrpPrice = xrp.trade_price.toLocaleString();
+      const xrpChange = (xrp.signed_change_rate * 100).toFixed(2);
+      const xrpRise = xrp.change === "RISE";
+      xrpPriceDisplay.textContent = `₩${xrpPrice} (${xrpRise ? '+' : ''}${xrpChange}%)`;
+      xrpPriceDisplay.className = xrpRise ? "up" : "down";
+    }
   } catch (error) {
     console.error("Upbit API 호출 에러:", error);
-    btcPriceDisplay.textContent = "데이터 오류";
   }
 }
 
