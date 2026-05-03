@@ -12,11 +12,8 @@
   --set-bg: #f8fafc;
   --set-border: #e5e7eb;
   --set-title: #344054;
-  --note-color: #7b8494;
-  --button-bg: #2563eb;
-  --button-hover: #1d4ed8;
-  --button-shadow: rgba(37, 99, 235, 0.25);
   --accent-color: #2563eb;
+  --ai-bg: rgba(37, 99, 235, 0.05);
   --up-color: #ef4444;
   --down-color: #3b82f6;
 }
@@ -36,6 +33,7 @@
   --set-border: #334155;
   --set-title: #cbd5e1;
   --accent-color: #60a5fa;
+  --ai-bg: rgba(96, 165, 250, 0.1);
 }
 
 * {
@@ -137,67 +135,103 @@ body {
 
 .info-section h2 {
   font-size: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   color: var(--text-header);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+}
+
+.issue-group h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent-color);
 }
 
 /* Card Grid */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
 
 .data-card {
-  padding: 24px;
+  padding: 20px;
   background: var(--set-bg);
   border: 1px solid var(--set-border);
   border-radius: 16px;
-  transition: transform 0.2s ease;
 }
 
-.data-card:hover {
-  transform: translateY(-4px);
-}
-
-.data-card h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: var(--accent-color);
+.data-card h4 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: var(--text-header);
 }
 
 .data-card p {
   font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* List Container */
-.list-container {
-  display: grid;
-  gap: 12px;
-}
-
-.list-item {
-  padding: 16px;
-  background: var(--set-bg);
-  border-radius: 12px;
-  font-size: 15px;
   line-height: 1.5;
+  margin-bottom: 12px;
 }
 
-.list-item strong {
+.ai-analysis {
+  padding: 12px;
+  background: var(--ai-bg);
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ai-analysis strong {
   color: var(--accent-color);
-  margin-right: 8px;
+}
+
+/* Expert Grid */
+.expert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.expert-card {
+  padding: 24px;
+  background: var(--set-bg);
+  border-radius: 20px;
+  border: 1px solid var(--set-border);
+}
+
+.expert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.expert-header h3 {
+  font-size: 18px;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.expert-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
 }
 
 /* Yield Grid */
 .yield-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
 }
 
@@ -218,7 +252,6 @@ body {
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 12px;
 }
 
 .data-table th {
@@ -226,50 +259,42 @@ body {
   padding: 12px;
   background: var(--set-bg);
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .data-table td {
-  padding: 16px 12px;
+  padding: 14px 12px;
   border-bottom: 1px solid var(--set-border);
-  font-size: 15px;
+  font-size: 14px;
 }
 
-/* Insight Box */
-.insight-box {
+/* Summary Box */
+.summary-box {
   padding: 32px;
   background: var(--set-bg);
   border-radius: 20px;
-  border-left: 6px solid var(--accent-color);
-}
-
-.insight-box h3 {
-  margin-bottom: 16px;
-}
-
-.warning-tag {
-  margin-top: 20px;
-  padding: 12px 16px;
-  background: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* Summary */
-.summary-container {
   display: grid;
   gap: 16px;
 }
 
-.summary-item {
-  padding: 20px;
-  background: var(--set-bg);
-  border-radius: 14px;
+.summary-row {
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-/* Mode Toggle */
+.summary-row.accent {
+  padding: 16px;
+  background: var(--ai-bg);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.summary-row strong {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+/* Form & Footer */
 .mode-toggle {
   background: none;
   border: none;
@@ -279,7 +304,6 @@ body {
   font-size: 20px;
 }
 
-/* Form */
 .contact-form {
   display: grid;
   gap: 16px;

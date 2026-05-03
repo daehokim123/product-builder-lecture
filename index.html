@@ -15,11 +15,9 @@
     <div class="nav-container">
       <a href="#" class="nav-logo">GEA Hub</a>
       <ul class="nav-links">
-        <li><a href="#news">경제뉴스</a></li>
-        <li><a href="#analysis">전문가분석</a></li>
-        <li><a href="#sectors">실시간수익률</a></li>
-        <li><a href="#defi">DeFi수익률</a></li>
-        <li><a href="#my-insight">본인분석</a></li>
+        <li><a href="#daily-issue">오늘의이슈</a></li>
+        <li><a href="#expert">전문가분석</a></li>
+        <li><a href="#data">실시간데이터</a></li>
         <li><a href="#weekly">주간요약</a></li>
       </ul>
       <button id="modeToggle" class="mode-toggle" aria-label="다크 모드 토글">☀️</button>
@@ -32,112 +30,141 @@
       <p>글로벌 거시 경제 데이터와 전문가 인사이트를 실시간으로 분석합니다.</p>
     </header>
 
-    <!-- 📰 경제 뉴스 (Daily) -->
-    <section id="news" class="info-section">
-      <h2>📰 경제 뉴스 (Daily)</h2>
-      <div class="card-grid">
-        <div class="data-card">
-          <h3>🇺🇸 미국 경제</h3>
-          <p>연준의 금리 동결 기조와 고용 지표 발표 예정. 인플레이션 둔화 속도 주목.</p>
+    <!-- 1️⃣ 오늘의 이슈 (Daily) -->
+    <section id="daily-issue" class="info-section">
+      <h2>1️⃣ 오늘의 이슈 (Daily)</h2>
+      
+      <div class="issue-group">
+        <h3>🌍 글로벌 이슈</h3>
+        <div class="card-grid">
+          <div class="data-card">
+            <h4>미국 소비자물가지수(CPI) 발표</h4>
+            <p>예상치를 하회하는 결과로 금리 인하 기대감 확산.</p>
+            <div class="ai-analysis">
+              <strong>🤖 AI 분석:</strong> 인플레이션 둔화 추세가 고착화될 경우 연내 2회 이상의 금리 인하 가능성이 높아짐.
+            </div>
+          </div>
+          <div class="data-card">
+            <h4>중국 경기 부양책 효과</h4>
+            <p>상해 증시 반등 및 소비 지표 개선 조짐.</p>
+            <div class="ai-analysis">
+              <strong>🤖 AI 분석:</strong> 내수 회복 강도가 관건이며, 원자재 가격 상승 압력으로 작용할 수 있음.
+            </div>
+          </div>
+          <div class="data-card">
+            <h4>엔화 가치 변동성 확대</h4>
+            <p>일본은행(BOJ)의 정책 변화 가능성에 따른 시장 민감도 증가.</p>
+            <div class="ai-analysis">
+              <strong>🤖 AI 분석:</strong> 엔-캐리 트레이드 청산 리스크에 대비한 포트폴리오 조정 필요.
+            </div>
+          </div>
         </div>
-        <div class="data-card">
-          <h3>🇨🇳 중국 경제</h3>
-          <p>부동산 경기 부양책 효과 검증 단계. 내수 소비 회복 지표 분석.</p>
-        </div>
-        <div class="data-card">
-          <h3>🇪🇺 유럽 경제</h3>
-          <p>ECB의 통화 정책 변화 및 유로존 에너지 가격 안정성 점검.</p>
-        </div>
-        <div class="data-card">
-          <h3>₿ 암호화폐 뉴스</h3>
-          <p>현물 ETF 유입세 지속 및 반감기 이후 채굴 난이도 조정 영향.</p>
+      </div>
+
+      <div class="issue-group" style="margin-top: 32px;">
+        <h3>🇰🇷 한국 이슈</h3>
+        <div class="card-grid">
+          <div class="data-card">
+            <h4>반도체 수출 호조 지속</h4>
+            <p>메모리 반도체 단가 상승 및 AI 서버 수요 증가.</p>
+            <div class="ai-analysis">
+              <strong>🤖 AI 분석:</strong> 하반기 경상수지 흑자 폭 확대의 핵심 동력으로 작용할 전망.
+            </div>
+          </div>
+          <div class="data-card">
+            <h4>가계부채 및 부동산 대출 추이</h4>
+            <p>정부의 스트레스 DSR 도입 영향 분석.</p>
+            <div class="ai-analysis">
+              <strong>🤖 AI 분석:</strong> 금리 인하 시점과 맞물려 가계 부채 관리 역량이 금융 안정의 핵심.
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 📊 전문가 분석 정리 -->
-    <section id="analysis" class="info-section">
-      <h2>📊 전문가 분석 정리</h2>
-      <div class="list-container">
-        <div class="list-item">
-          <strong>Bloomberg:</strong> "글로벌 공급망 재편에 따른 인플레이션 장기화 우려 제기"
+    <!-- 2️⃣ 전문가 경제 분석 (2x/주) -->
+    <section id="expert" class="info-section">
+      <h2>2️⃣ 전문가 경제 분석 (2x/주)</h2>
+      <div class="expert-grid">
+        <div class="expert-card">
+          <div class="expert-header">
+            <h3>박종훈 교수 (거시경제)</h3>
+            <span class="tag">Weekly Update</span>
+          </div>
+          <p>"글로벌 고금리 장기화가 신흥국 부채 리스크에 미치는 영향이 임계점에 도달하고 있습니다. 선제적인 리스크 관리가 필요합니다."</p>
         </div>
-        <div class="list-item">
-          <strong>JP Morgan:</strong> "기술주 중심의 실적 장세 지속, 하반기 연착륙 가능성 70% 상회"
-        </div>
-        <div class="list-item">
-          <strong>Goldman Sachs:</strong> "에너지 섹터 비중 확대 제안, 지정학적 리스크 프리미엄 반영"
-        </div>
-        <div class="list-item">
-          <strong>투자은행 종합:</strong> 금리 인하 시점에 대한 의견차 존재하나, 전반적 낙관론 우세.
+        <div class="expert-card">
+          <div class="expert-header">
+            <h3>안유화 교수 (금융시장)</h3>
+            <span class="tag">Market Insight</span>
+          </div>
+          <p>"디지털 금융 자산의 제도권 편입은 거스를 수 없는 흐름입니다. 특히 실물자산 토큰화(RWO) 시장의 성장을 주목해야 합니다."</p>
         </div>
       </div>
     </section>
 
-    <!-- 📈 섹터별 실시간 수익률 -->
-    <section id="sectors" class="info-section">
-      <h2>📈 섹터별 실시간 수익률</h2>
-      <div class="yield-grid">
-        <div class="yield-item up"><span>기술주 (Tech)</span> <strong>+2.45%</strong></div>
-        <div class="yield-item up"><span>금융주 (Finance)</span> <strong>+1.12%</strong></div>
-        <div class="yield-item down"><span>에너지 (Energy)</span> <strong>-0.85%</strong></div>
-        <div class="yield-item up"><span>부동산 (Real Estate)</span> <strong>+0.34%</strong></div>
-        <div class="yield-item up"><span>암호화폐 (DeFi)</span> <strong>+5.12%</strong></div>
+    <!-- 3️⃣ 실시간 데이터 -->
+    <section id="data" class="info-section">
+      <h2>3️⃣ 실시간 데이터</h2>
+      <div class="data-tabs">
+        <div class="data-sub-section">
+          <h3>📈 주요 지수</h3>
+          <div class="yield-grid">
+            <div class="yield-item up"><span>KOSPI</span> <strong>2,740.12 (+1.2%)</strong></div>
+            <div class="yield-item up"><span>S&P 500</span> <strong>5,420.15 (+0.8%)</strong></div>
+            <div class="yield-item down"><span>NASDAQ</span> <strong>17,850.44 (-0.3%)</strong></div>
+            <div class="yield-item up"><span>USD/KRW</span> <strong>1,375.50 (+0.2%)</strong></div>
+          </div>
+        </div>
+        <div class="data-sub-section" style="margin-top: 32px;">
+          <h3>💰 DeFi 수익률 비교</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>자산/플랫폼</th>
+                <th>APY</th>
+                <th>방식</th>
+                <th>리스크</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ethereum</td>
+                <td>3.6%</td>
+                <td>Staking</td>
+                <td>낮음</td>
+              </tr>
+              <tr>
+                <td>USDC-DAI</td>
+                <td>8.2%</td>
+                <td>Liquidity</td>
+                <td>보통</td>
+              </tr>
+              <tr>
+                <td>Layer 2 Farm</td>
+                <td>15.4%</td>
+                <td>Yield</td>
+                <td>높음</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-    <!-- 💰 DeFi 수익률 비교 -->
-    <section id="defi" class="info-section">
-      <h2>💰 DeFi 수익률 비교</h2>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>플랫폼/방식</th>
-            <th>APY</th>
-            <th>기간</th>
-            <th>리스크 레벨</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Staking (ETH)</td>
-            <td>3.8%</td>
-            <td>유동적</td>
-            <td>낮음</td>
-          </tr>
-          <tr>
-            <td>LP (USDC-WETH)</td>
-            <td>12.5%</td>
-            <td>주간</td>
-            <td>보통</td>
-          </tr>
-          <tr>
-            <td>Yield Farming</td>
-            <td>24.0%+</td>
-            <td>일일</td>
-            <td>높음</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- 💡 본인 분석 -->
-    <section id="my-insight" class="info-section">
-      <h2>💡 본인 분석</h2>
-      <div class="insight-box">
-        <h3>섹터 전망 및 투자 기회</h3>
-        <p>인공지능(AI) 인프라 확장에 따른 전력 수요 급증으로 에너지 인프라 섹터의 중장기 수혜가 예상됩니다. 또한 가상자산 시장의 제도권 편입 가속화에 따른 포트폴리오 다변화가 필요한 시점입니다.</p>
-        <div class="warning-tag">⚠️ 리스크 경고: 고금리 유지 기간 연장에 따른 중소형 금융기관의 유동성 리스크 주의 필요.</div>
-      </div>
-    </section>
-
-    <!-- 📌 주간 요약 -->
+    <!-- 4️⃣ 주간 요약 (1x/주) -->
     <section id="weekly" class="info-section">
-      <h2>📌 주간 요약</h2>
-      <div class="summary-container">
-        <div class="summary-item"><strong>이주의 핵심:</strong> 고용 지표 안정이 금리 인하 기대감을 뒷받침함.</div>
-        <div class="summary-item"><strong>다음주 관전포인트:</strong> 소비자물가지수(CPI) 발표 및 연준 의장 발언.</div>
-        <div class="summary-item"><strong>투자 아이디어:</strong> 배당 성장주와 레이어2 솔루션 분할 매수 전략.</div>
+      <h2>4️⃣ 주간 요약 (1x/주)</h2>
+      <div class="summary-box">
+        <div class="summary-row">
+          <strong>🌍 글로벌 종합:</strong> 미국 물가 지표 안정이 시장 전반의 투심을 개선시켰으나, 중동 지정학적 불안은 상존함.
+        </div>
+        <div class="summary-row">
+          <strong>🇰🇷 한국 종합:</strong> 수출 주도형 성장 회복세가 뚜렷하며, 기업 밸류업 프로그램에 대한 시장 기대감 지속.
+        </div>
+        <div class="summary-row accent">
+          <strong>🎯 다음주 전망:</strong> 주요 기업 실적 발표 및 소비자 신뢰지수 결과에 따라 변동성 확대 가능성.
+        </div>
       </div>
     </section>
 
