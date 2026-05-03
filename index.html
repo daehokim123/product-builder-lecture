@@ -11,11 +11,24 @@
 </head>
 
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">LottoGen</a>
+      <ul class="nav-links">
+        <li><a href="#generate">추천받기</a></li>
+        <li><a href="#how-to">이용방법</a></li>
+        <li><a href="#tips">번호팁</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#privacy">개인정보</a></li>
+      </ul>
+      <button id="modeToggle" class="mode-toggle" aria-label="다크 모드 토글">☀️</button>
+    </div>
+  </nav>
+
   <main class="container">
-    <button id="modeToggle" class="mode-toggle" aria-label="다크 모드 토글">☀️</button>
-    <div class="header">
+    <div id="generate" class="header">
       <h1>로또 번호 추천기</h1>
-      <p>버튼을 누르면 중복 없는 로또 번호 5세트를 한 번에 추천합니다.</p>
+      <p>빅데이터 통계가 아닌, 순수 확률 기반의 무작위 번호 5세트를 추천합니다.</p>
     </div>
 
     <section id="lottoNumbers" class="lotto-list" aria-live="polite"></section>
@@ -25,6 +38,43 @@
     <div class="note">
       ※ 이 번호는 무작위 추천이며 당첨을 보장하지 않습니다.
     </div>
+
+    <!-- 정보성 콘텐츠 섹션 추가 -->
+    <section id="how-to" class="info-section">
+      <h2>📖 이용 방법</h2>
+      <p>이 서비스는 복잡한 가입 절차 없이 누구나 무료로 로또 번호를 생성할 수 있습니다. 상단의 '추천받기' 버튼을 누르시면 1부터 45까지의 숫자 중 중복되지 않는 6개의 숫자를 한 세트로 하여, 총 5세트의 번호를 즉시 생성해 드립니다.</p>
+      <ul>
+        <li>생성된 번호는 오름차순으로 자동 정렬되어 확인이 편리합니다.</li>
+        <li>번호 공의 색상은 실제 로또 당첨 번호의 색상 범위와 동일하게 적용되어 시인성을 높였습니다.</li>
+        <li>추가적인 번호가 필요하시면 언제든지 버튼을 다시 눌러 새로운 조합을 얻으실 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <section id="tips" class="info-section">
+      <h2>💡 로또 번호 선택 팁</h2>
+      <p>로또의 당첨 확률은 약 814만 분의 1로 매우 희박합니다. 하지만 많은 분들이 번호를 선택할 때 다음과 같은 방식을 참고하곤 합니다.</p>
+      <div class="tip-card-grid">
+        <div class="tip-card">
+          <h3>균형 있는 선택</h3>
+          <p>홀수와 짝수의 비율을 3:3 또는 2:4 정도로 섞는 것이 통계적으로 자주 나타나는 유형입니다.</p>
+        </div>
+        <div class="tip-card">
+          <h3>연속 번호 지양</h3>
+          <p>1, 2, 3과 같이 연속된 세 개 이상의 숫자가 나오는 경우는 드물기 때문에 적절히 분산시키는 것이 좋습니다.</p>
+        </div>
+      </div>
+      <p>중요한 것은 로또는 어디까지나 <strong>확률 게임</strong>이라는 점입니다. 과도한 몰입보다는 소소한 재미로 즐기시는 것을 권장합니다.</p>
+    </section>
+
+    <section id="about" class="info-section">
+      <h2>👋 사이트 소개</h2>
+      <p>LottoGen(KDH 제작)은 사용자들에게 직관적이고 깔끔한 디자인으로 로또 번호를 추천하기 위해 만들어진 프로젝트입니다. 최신 웹 기술을 활용하여 모바일과 데스크톱 모두에서 최적화된 경험을 제공하며, 사용자 여러분의 행운을 진심으로 기원합니다.</p>
+    </section>
+
+    <section id="privacy" class="info-section">
+      <h2>🛡️ 개인정보처리방침</h2>
+      <p>본 사이트는 사용자의 어떠한 개인정보도 서버에 저장하거나 수집하지 않습니다. 번호 생성 로직은 사용자의 브라우저 내에서 직접 실행되며, 쿠키(Local Storage)는 오직 사용자의 다크모드 테마 설정을 기억하기 위한 목적으로만 최소한으로 사용됩니다. 또한, 구글 애드센스 등 타사 광고 서비스를 통해 익명의 방문 통계가 수집될 수 있습니다.</p>
+    </section>
 
     <section class="contact-section">
       <h2>🤝 제휴 및 비즈니스 문의</h2>
