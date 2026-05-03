@@ -135,8 +135,34 @@ body {
 
 .info-section h2 {
   font-size: 24px;
-  margin-bottom: 32px;
   color: var(--text-header);
+  margin: 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.archive-selector select {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--set-border);
+  background: var(--set-bg);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.archive-selector select:hover {
+  border-color: var(--accent-color);
 }
 
 .issue-group h3 {
