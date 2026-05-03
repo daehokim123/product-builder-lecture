@@ -34,6 +34,14 @@ async function fetchUpbitPrice() {
     }
   } catch (error) {
     console.error("Upbit API 호출 에러:", error);
+    if (btcPriceDisplay) {
+      btcPriceDisplay.textContent = "일시적으로 확인 불가";
+      btcPriceDisplay.className = "";
+    }
+    if (xrpPriceDisplay) {
+      xrpPriceDisplay.textContent = "일시적으로 확인 불가";
+      xrpPriceDisplay.className = "";
+    }
   }
 }
 
@@ -43,6 +51,38 @@ setInterval(fetchUpbitPrice, 10000);
 // --- 데이터 저장소 (예시 데이터 포함) ---
 const archives = {
   daily: [
+    {
+      date: "2026-05-04",
+      global: [
+        {
+          title: "미중 산업 전략의 분화",
+          text: "미국은 IRA와 반도체 지원 정책을 통해 공급망 현지화를 강화하고, 중국은 전장·배터리·소비 시장에서 영향력을 유지하고 있습니다.",
+          ai: "기업의 지역 선택이 포트폴리오 전략에도 영향을 줍니다. 미국 정책 수혜주와 중국 소비·기술 회복주는 서로 다른 리스크를 갖고 접근해야 합니다."
+        },
+        {
+          title: "에너지 가격 안정과 물가 기대",
+          text: "유가가 큰 폭의 급등 없이 안정되면서 물가 재가속 우려가 일부 완화되고 있습니다.",
+          ai: "에너지 가격 안정은 중앙은행의 긴축 부담을 낮추지만, 지정학 리스크가 재부각될 경우 시장 변동성이 커질 수 있습니다."
+        },
+        {
+          title: "달러 강세 둔화 여부 주목",
+          text: "미국 금리 경로에 대한 기대가 바뀌며 달러 인덱스의 방향성이 주요 변수로 부상했습니다.",
+          ai: "달러 강세가 둔화되면 신흥국 통화와 원자재, 해외 위험자산에 우호적인 환경이 만들어질 수 있습니다."
+        }
+      ],
+      korea: [
+        {
+          title: "반도체 수출 회복세 점검",
+          text: "AI 서버 수요와 메모리 가격 흐름이 한국 수출 경기의 핵심 변수로 남아 있습니다.",
+          ai: "수출 회복은 코스피 이익 전망에 긍정적이나, 중국 수요와 환율 흐름을 함께 확인해야 합니다."
+        },
+        {
+          title: "원/달러 환율 안정의 의미",
+          text: "환율 안정은 수입 물가 부담을 낮추고 외국인 수급 개선에 도움을 줄 수 있습니다.",
+          ai: "단기 환율보다 경상수지, 금리 차, 외국인 자금 흐름을 함께 보는 것이 중요합니다."
+        }
+      ]
+    },
     {
       date: "2026-05-03",
       global: [
@@ -116,14 +156,14 @@ function initDarkMode() {
   
   if (isDark) {
     document.body.classList.add("dark-mode");
-    modeToggle.textContent = "🌙";
+    modeToggle.textContent = "☾";
   }
 }
 
 modeToggle.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark-mode");
   localStorage.setItem("darkMode", isDark);
-  modeToggle.textContent = isDark ? "🌙" : "☀️";
+  modeToggle.textContent = isDark ? "☾" : "☀";
 });
 
 // --- 아카이브 렌더링 로직 ---
@@ -165,7 +205,7 @@ function renderDaily(index) {
         `).join('')}
       </div>
     </div>
-    <div class="issue-group" style="margin-top: 32px;">
+    <div class="issue-group issue-group-spaced">
       <h3>🇰🇷 한국 이슈</h3>
       <div class="card-grid">
         ${data.korea.map(item => `
