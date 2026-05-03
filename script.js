@@ -1,6 +1,17 @@
 const lottoArea = document.getElementById("lottoNumbers");
 const generateButton = document.getElementById("generateButton");
 const modeToggle = document.getElementById("modeToggle");
+const contactForm = document.getElementById("contactForm");
+
+// 문의 폼 제출 처리
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  const name = formData.get("name");
+  
+  alert(`${name}님, 문의가 정상적으로 접수되었습니다. (감사합니다!)`);
+  contactForm.reset();
+});
 
 // 다크 모드 초기화 및 토글 로직
 function initDarkMode() {

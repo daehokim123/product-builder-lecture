@@ -212,6 +212,59 @@ button:active {
   line-height: 1.5;
 }
 
+.contact-section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px dashed var(--container-border);
+}
+
+.contact-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-header);
+  text-align: center;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--set-border);
+  background: var(--set-bg);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.submit-btn {
+  background: var(--button-bg);
+  margin-top: 8px;
+}
+
 @media (max-width: 560px) {
   body {
     align-items: flex-start;
