@@ -228,73 +228,74 @@ body {
   margin: 0;
 }
 
-/* Yield Grid */
-.yield-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
-
-.yield-item {
-  padding: 16px;
-  background: var(--set-bg);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.yield-item.up strong { color: var(--up-color); }
-.yield-item.down strong { color: var(--down-color); }
-
-/* Table */
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.data-table th {
-  text-align: left;
-  padding: 12px;
-  background: var(--set-bg);
-  color: var(--text-secondary);
-  font-size: 13px;
-}
-
-.data-table td {
-  padding: 14px 12px;
-  border-bottom: 1px solid var(--set-border);
-  font-size: 14px;
-}
-
-/* Summary Box */
-.summary-box {
-  padding: 32px;
-  background: var(--set-bg);
-  border-radius: 20px;
-  display: grid;
-  gap: 16px;
-}
-
-.summary-row {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.summary-row.accent {
-  padding: 16px;
-  background: var(--ai-bg);
-  border-radius: 12px;
+.data-group h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-left: 10px;
   border-left: 4px solid var(--accent-color);
 }
 
-.summary-row strong {
-  color: var(--accent-color);
-  margin-right: 8px;
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
-/* Form & Footer */
+.market-box {
+  padding: 20px;
+  background: var(--set-bg);
+  border: 1px solid var(--set-border);
+  border-radius: 16px;
+}
+
+.market-box h4 {
+  font-size: 15px;
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+}
+
+.market-data {
+  display: grid;
+  gap: 10px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.data-row span {
+  color: var(--text-primary);
+}
+
+.data-row.up strong { color: var(--up-color); }
+.data-row.down strong { color: var(--down-color); }
+
+/* Indicator Item Style */
+.indicator-item {
+  padding: 16px;
+  background: var(--set-bg);
+  border: 1px solid var(--set-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.indicator-item span {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.indicator-item strong {
+  font-size: 16px;
+}
+
+.indicator-item strong.up { color: var(--up-color); }
+.indicator-item strong.down { color: var(--down-color); }
+
+/* Expert Grid */
 .mode-toggle {
   background: none;
   border: none;

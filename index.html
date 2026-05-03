@@ -106,49 +106,99 @@
     <!-- 3️⃣ 실시간 데이터 -->
     <section id="data" class="info-section">
       <h2>3️⃣ 실시간 데이터</h2>
-      <div class="data-tabs">
-        <div class="data-sub-section">
-          <h3>📈 주요 지수</h3>
-          <div class="yield-grid">
-            <div class="yield-item up"><span>KOSPI</span> <strong>2,740.12 (+1.2%)</strong></div>
-            <div class="yield-item up"><span>S&P 500</span> <strong>5,420.15 (+0.8%)</strong></div>
-            <div class="yield-item down"><span>NASDAQ</span> <strong>17,850.44 (-0.3%)</strong></div>
-            <div class="yield-item up"><span>USD/KRW</span> <strong>1,375.50 (+0.2%)</strong></div>
+      
+      <div class="data-group">
+        <h3>🌍 국가별 주요 지수</h3>
+        <div class="market-grid">
+          <div class="market-box">
+            <h4>🇺🇸 미국</h4>
+            <div class="market-data">
+              <div class="data-row up"><span>S&P 500</span> <strong>5,420.15 (+0.8%)</strong></div>
+              <div class="data-row down"><span>NASDAQ</span> <strong>17,850.44 (-0.3%)</strong></div>
+              <div class="data-row up"><span>DOW</span> <strong>39,120.50 (+0.5%)</strong></div>
+            </div>
+          </div>
+          <div class="market-box">
+            <h4>🇨🇳 중국</h4>
+            <div class="market-data">
+              <div class="data-row up"><span>상해종합</span> <strong>3,050.22 (+1.1%)</strong></div>
+              <div class="data-row up"><span>항셍</span> <strong>18,200.45 (+1.5%)</strong></div>
+            </div>
+          </div>
+          <div class="market-box">
+            <h4>🇯🇵 일본</h4>
+            <div class="market-data">
+              <div class="data-row down"><span>Nikkei 225</span> <strong>38,700.12 (-0.4%)</strong></div>
+            </div>
+          </div>
+          <div class="market-box">
+            <h4>🇪🇺 유럽</h4>
+            <div class="market-data">
+              <div class="data-row up"><span>Euro Stoxx 50</span> <strong>4,980.50 (+0.6%)</strong></div>
+              <div class="data-row down"><span>DAX (독일)</span> <strong>18,100.20 (-0.2%)</strong></div>
+            </div>
           </div>
         </div>
-        <div class="data-sub-section" style="margin-top: 32px;">
-          <h3>💰 DeFi 수익률 비교</h3>
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>자산/플랫폼</th>
-                <th>APY</th>
-                <th>방식</th>
-                <th>리스크</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Ethereum</td>
-                <td>3.6%</td>
-                <td>Staking</td>
-                <td>낮음</td>
-              </tr>
-              <tr>
-                <td>USDC-DAI</td>
-                <td>8.2%</td>
-                <td>Liquidity</td>
-                <td>보통</td>
-              </tr>
-              <tr>
-                <td>Layer 2 Farm</td>
-                <td>15.4%</td>
-                <td>Yield</td>
-                <td>높음</td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+
+      <div class="data-group" style="margin-top: 32px;">
+        <h3>📊 주요 시장 지표</h3>
+        <div class="market-grid">
+          <div class="indicator-item">
+            <span>🥇 금 (Gold)</span>
+            <strong class="up">$2,350.40 (+0.4%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>🛢️ 유가 (WTI)</span>
+            <strong class="down">$78.20 (-1.2%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>💵 환율 (USD/KRW)</span>
+            <strong class="up">1,375.50 (+0.2%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>📉 달러 인덱스</span>
+            <strong class="down">104.50 (-0.1%)</strong>
+          </div>
+          <div class="indicator-item">
+            <span>🪙 비트코인</span>
+            <strong class="up">$67,200 (+2.5%)</strong>
+          </div>
         </div>
+      </div>
+
+      <div class="data-group" style="margin-top: 32px;">
+        <h3>💰 DeFi 수익률 비교</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>자산/플랫폼</th>
+              <th>APY</th>
+              <th>방식</th>
+              <th>리스크</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ethereum</td>
+              <td>3.6%</td>
+              <td>Staking</td>
+              <td>낮음</td>
+            </tr>
+            <tr>
+              <td>USDC-DAI</td>
+              <td>8.2%</td>
+              <td>Liquidity</td>
+              <td>보통</td>
+            </tr>
+            <tr>
+              <td>Layer 2 Farm</td>
+              <td>15.4%</td>
+              <td>Yield</td>
+              <td>높음</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
